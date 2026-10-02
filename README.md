@@ -1,123 +1,43 @@
-# Backend Template (NestJS + Prisma)
+# ars-backend-template
 
-A production-ready, scalable backend starter template built with **NestJS**, **Prisma ORM**, **PostgreSQL**, and modern development tooling.
-
----
-
-## 🚀 Features
-
-- **Framework**: [NestJS](https://nestjs.com/) (Modular, scalable architecture)
-- **Database & ORM**: [Prisma ORM](https://www.prisma.io/) with PostgreSQL support
-- **Configuration**: `@nestjs/config` for environment variable management
-- **Observability**: `@nestjs/observe` integration for APM, tracing, and logging
-- **Linter & Formatter**: [Oxlint](https://oxc.rs/) (high-performance linting) & [Prettier](https://prettier.io/)
-- **Testing**: [Vitest](https://vitest.dev/) for blazing fast unit and E2E tests
-- **Module System**: Pure ECMAScript Modules (ESM) support
+> Production-ready NestJS starter template with Prisma ORM & PostgreSQL.
 
 ---
 
-## 📁 Project Structure
+### ❓ What
+A pre-configured backend architecture built with **NestJS**, **Prisma ORM**, **PostgreSQL**, **Oxlint**, and **Vitest**.
 
-```text
-├── prisma/
-│   ├── schema.prisma      # Database schema definitions
-│   └── ...
-├── src/
-│   ├── prisma/            # Prisma service & module
-│   ├── app.controller.ts  # Base health-check controller
-│   ├── app.module.ts      # Root application module
-│   ├── app.service.ts     # Root application service
-│   └── main.ts            # Application bootstrap entrypoint
-├── test/                  # E2E test files
-├── .env.example           # Example environment configuration
-├── package.json
-└── tsconfig.json
-```
+### 💡 Why
+To eliminate repetitive backend setup time and maintain a consistent, scalable structure across all projects.
 
----
-
-## 🛠️ Getting Started
-
-### 1. Prerequisites
-
-- [Node.js](https://nodejs.org/) (v20+ recommended)
-- [PostgreSQL](https://www.postgresql.org/) database (local or cloud like Supabase / Neon)
-
-### 2. Environment Setup
-
-Clone the project and copy `.env.example` to `.env`:
+### 🚀 How to Run
 
 ```bash
+# 1. Clone & enter
+git clone https://github.com/ars2k03/ars-backend-template.git my-backend
+cd my-backend
+
+# 2. Environment & Dependencies
 cp .env.example .env
-```
-
-Update your database credentials and configuration in `.env`:
-
-```env
-PORT=8000
-NODE_ENV="development"
-DATABASE_URL="postgresql://user:password@localhost:5432/mydb?schema=public"
-
-OBSERVE_APP_KEY="your-observe-key"
-OBSERVE_APP_SECRET="your-observe-secret"
-OBSERVE_SERVICE_ID="backend"
-```
-
-### 3. Install Dependencies
-
-```bash
 npm install
-```
-
-### 4. Database Setup & Prisma Client
-
-Generate Prisma Client and apply migrations:
-
-```bash
 npx prisma generate
-npx prisma db push
-```
 
----
-
-## 🏃 Running the Application
-
-```bash
-# Development mode with watch
+# 3. Start development
 npm run start:dev
-
-# Production build
-npm run build
-
-# Start production server
-npm run start:prod
 ```
-
-Once running, visit [http://localhost:8000](http://localhost:8000) to verify the health check endpoint.
 
 ---
 
-## 🧪 Testing & Quality
+### 🛠️ Common Scripts
 
-```bash
-# Run unit tests (Vitest)
-npm run test
-
-# Run tests in watch mode
-npm run test:watch
-
-# Run E2E tests
-npm run test:e2e
-
-# Run linter (Oxlint)
-npm run lint
-
-# Format code (Prettier)
-npm run format
-```
+| Command | Action |
+| --- | --- |
+| `npm run start:dev` | Start app in development mode with watch |
+| `npm run build` | Build production bundle |
+| `npm run test` | Run tests with Vitest |
+| `npm run lint` | Fast linting with Oxlint |
 
 ---
 
 ## 📄 License
-
-This project is licensed under the MIT License.
+MIT © [Md. Arafat Rahman Sohan](https://github.com/ars2k03)
